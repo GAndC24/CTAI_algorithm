@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
 import torch.optim as optim
 
-from tools.my_dataset import COVIDDataset
+from my_dataset import COVIDDataset
 from resnet_uscl import ResNetUSCL
 
 apex_support = False
@@ -243,7 +243,7 @@ def main():
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='linear evaluation')
-    parser.add_argument('-p', '--path', default='checkpoint', help='folder of ckpt')
+    parser.add_argument('-p', '--path', default='pretrained_model', help='folder of ckpt')
     args = parser.parse_args()
 
     set_seed(1)  # random seed

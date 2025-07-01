@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 import torchvision.models as models
 
@@ -79,4 +80,3 @@ class ResNetUSCL(nn.Module):
         x = self.linear(h)  # 投影到指定维度
 
         return x
-
